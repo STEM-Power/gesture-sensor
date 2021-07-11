@@ -1,6 +1,6 @@
 {
     "name": "GPLC01",
-    "version": "0.0.49",
+    "version": "0.1.0",
     "description": "GPLC01 sensor extension for microbit makecode",
     "dependencies": {
         "core": "*",
