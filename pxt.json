@@ -3,7 +3,8 @@
     "version": "0.0.49",
     "description": "XinaBox SL06 Gesture sensor: Gesture, Proximity, Color and Light Sensor",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "microphone": "*"
     },
     "files": [
         "README.md",
@@ -13,5 +14,12 @@
         "test.ts"
     ],
     "public": true,
+    "targetVersions": {
+        "target": "4.0.9",
+        "targetId": "microbit"
+    },
+    "supportedTargets": [
+        "microbit"
+    ],
     "preferredEditor": "tsprj"
 }
