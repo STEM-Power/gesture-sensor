@@ -1,12 +1,12 @@
 /**
- * XinaBox SL06 extension for makecode
+ * APDS9960 extension for makecode
  */
 /**
- * SL06 block
+ * GPLC01 block
  */
 //% color=#444444 icon="\uf256"
 //% groups='["Mode", "Light", "Proximity", "Gesture", "Optional"]'
-namespace SL06 {
+namespace GPLC01 {
 
     let DIR_NONE = 'none'
     let DIR_LEFT = 'left'
@@ -26,7 +26,7 @@ namespace SL06 {
         ALL_STATE1
     };
 
-    export enum sl06_mode {
+    export enum GPLC01_mode {
         //% block="LIGHT MODE"
         LIGHT_MODE,
 
@@ -89,8 +89,8 @@ namespace SL06 {
         FC = 2
     }
 
-    //%blockId=SL06_begin
-    //%block="SL06 begin"
+    //%blockId=GPLC01_begin
+    //%block="GPLC01 begin"
     //%advanced=true
     //%group=Optional
     function begin(): void {
@@ -191,8 +191,8 @@ namespace SL06 {
 
     }
 
-    //%blockId=SL06_getMode
-    //%block="SL06 get mode"
+    //%blockId=GPLC01_getMode
+    //%block="GPLC01 get mode"
     //%advanced=true
     //%group=Optional
     function getMode(): number {
@@ -205,8 +205,8 @@ namespace SL06 {
         return enable_value;
     }
 
-    //%blockId=SL06_setMode
-    //%block="SL06 set mode %mode %enable"
+    //%blockId=GPLC01_setMode
+    //%block="GPLC01 set mode %mode %enable"
     //%advanced=true
     //%group=Optional
     function setMode(mode: NumberFormat.UInt8BE, enable: NumberFormat.UInt8BE): boolean {
@@ -247,15 +247,15 @@ namespace SL06 {
     }
 
 
-    //%blockId=SL06_enablePower
-    //%block="SL06 enable power"
+    //%blockId=GPLC01_enablePower
+    //%block="GPLC01 enable power"
     //%group=Optional
     function enablePower() {
         setMode(0, 1)
     }
 
-    //%blockId=SL06_disablePower
-    //%block="SL06 disable power"
+    //%blockId=GPLC01_disablePower
+    //%block="GPLC01 disable power"
     //%group=Optional
     function disbalePower() {
         setMode(0, 0)
@@ -305,8 +305,8 @@ namespace SL06 {
 
     }
 
-    //%blockId=SL06_getLEDDRive
-    //%block="SL06 get LED drive"
+    //%blockId=GPLC01_getLEDDRive
+    //%block="GPLC01 get LED drive"
     //%advanced=true
     //%group=Optional
     function getLEDDrive() {
@@ -322,8 +322,8 @@ namespace SL06 {
         return val;
     }
 
-    //%blockId=SL06_setLEDDRive
-    //%block="SL06 set LED drive %drive"
+    //%blockId=GPLC01_setLEDDRive
+    //%block="GPLC01 set LED drive %drive"
     //%advanced=true
     //%group=Optional
     function setLEDDrive(drive: NumberFormat.UInt8BE): void {
@@ -345,8 +345,8 @@ namespace SL06 {
 
     }
 
-    //%blockId=SL06_getGestureLEDDrive
-    //%block="SL06 get gesture LED drive"
+    //%blockId=GPLC01_getGestureLEDDrive
+    //%block="GPLC01 get gesture LED drive"
     //%advanced=true
     //%group=Gesture
     function getGestureLEDDrive() {
@@ -362,8 +362,8 @@ namespace SL06 {
         return val;
     }
 
-    //%blockId=SL06_setGestureLEDDrive
-    //%block="SL06 set gesture LED drive %drive"
+    //%blockId=GPLC01_setGestureLEDDrive
+    //%block="GPLC01 set gesture LED drive %drive"
     //%group=Gesture
     //%advanced=true
     function setGestureLEDDrive(drive: number) {
@@ -384,8 +384,8 @@ namespace SL06 {
             ;
     }
 
-    //%blockId=SL06_getGestureGain
-    //%block="SL06 get gesture gain"
+    //%blockId=GPLC01_getGestureGain
+    //%block="GPLC01 get gesture gain"
     //%advanced=true
     //%group=Gesture
     function getGestureGain() {
@@ -401,8 +401,8 @@ namespace SL06 {
         return val;
     }
 
-    //%blockId=SL06_setGestureGain
-    //%block="SL06 set gesture gain %gain"
+    //%blockId=GPLC01_setGestureGain
+    //%block="GPLC01 set gesture gain %gain"
     //%advanced=true
     //%group=Gesture
     function setGestureGain(gain: number) {
@@ -424,8 +424,8 @@ namespace SL06 {
 
     }
 
-    //%blockId=SL06_getGestureIntEnable
-    //%block="SL06 get gesture int enable"
+    //%blockId=GPLC01_getGestureIntEnable
+    //%block="GPLC01 get gesture int enable"
     //%advanced=true
     //%group=Gesture
     function getGestureIntEnable() {
@@ -441,8 +441,8 @@ namespace SL06 {
         return val;
     }
 
-    //%blockId=SL06_setGestureIntEnable
-    //%block="SL06 set gesture int enable %enable"
+    //%blockId=GPLC01_setGestureIntEnable
+    //%block="GPLC01 set gesture int enable %enable"
     //%group=Gesture
     //%advanced=true
     function setGestureIntEnable(enable: number): void {
@@ -463,8 +463,8 @@ namespace SL06 {
 
     }
 
-    //%blockId=SL06_isGestureAvailable
-    //%block="SL06 is gesture available"
+    //%blockId=GPLC01_isGestureAvailable
+    //%block="GPLC01 is gesture available"
     //%group=Gesture
     function isGestureAvailable() {
         let val = 0;
@@ -485,8 +485,8 @@ namespace SL06 {
         }
     }
 
-    //%blockId=SL06_readGesture
-    //%block="SL06 read gesture"
+    //%blockId=GPLC01_readGesture
+    //%block="GPLC01 read gesture"
     //%group=Gesture
     export function gesture() {
         let fifo_level = 0;
@@ -580,7 +580,7 @@ namespace SL06 {
 
     }
 
-    //%block="SL06 on gesture %u"
+    //%block="GPLC01 on gesture %u"
     //%u.defl=1
     //%group=Gesture
     export function onGesture(u: gestures, handler: () => void) {
@@ -619,7 +619,7 @@ namespace SL06 {
 
 
     //%blockId="getGestureID"
-    //%block="SL06 get gesture ID"
+    //%block="GPLC01 get gesture ID"
     export function getGestureID(): number {
         let dir_id: number = 0
         if (motion_global == DIR_UP) {
@@ -853,21 +853,21 @@ namespace SL06 {
         return false;
     }
 
-    //%blockId=SL06_enabler
-    //%block="SL06 enable %u"
+    //%blockId=GPLC01_enabler
+    //%block="GPLC01 enable %u"
     //%u.defl=1
     //%interrupts.defl=false
     //%group=Mode
-    export function enable_mode(u: sl06_mode): void {
-        if (u == sl06_mode.LIGHT_MODE) {
+    export function enable_mode(u: GPLC01_mode): void {
+        if (u == GPLC01_mode.LIGHT_MODE) {
             disableProximitySensor()
             disableGestureSensor()
             enableLightSensor()
-        } else if (u == sl06_mode.PROXIMITY_MODE) {
+        } else if (u == GPLC01_mode.PROXIMITY_MODE) {
             disableLightSensor()
             disableGestureSensor()
             enableProximitySensor()
-        } else if (u == sl06_mode.GESTURE_MODE) {
+        } else if (u == GPLC01_mode.GESTURE_MODE) {
             disableLightSensor()
             disableProximitySensor()
             enableGestureSensor()
@@ -915,8 +915,8 @@ namespace SL06 {
 
     }
 
-    //%blockId=SL06_getProximityGain
-    //%block="SL06 get proximity gain"
+    //%blockId=GPLC01_getProximityGain
+    //%block="GPLC01 get proximity gain"
     //%advanced=true
     //%group=Proximity
     function getProximityGain(): number {
@@ -932,8 +932,8 @@ namespace SL06 {
         return val;
     }
 
-    //%blockId=SL06_setProximityGain
-    //%block="SL06 set proximity gain %drive"
+    //%blockId=GPLC01_setProximityGain
+    //%block="GPLC01 set proximity gain %drive"
     //%advanced=true
     //%group=Proximity
     function setProximityGain(drive: NumberFormat.UInt8BE): void {
@@ -954,8 +954,8 @@ namespace SL06 {
         wireWriteDataByte(0x8F, val)
     }
 
-    //%blockId=SL06_getProximity
-    //%block="SL06 proximity"
+    //%blockId=GPLC01_getProximity
+    //%block="GPLC01 proximity"
     //%group=Proximity
     export function proximity() {
         let val: number = 0;
@@ -989,8 +989,8 @@ namespace SL06 {
 
     }
 
-    //%blockId=SL06_getAmbientLightGain
-    //%block="SL06 get ambient light gain"
+    //%blockId=GPLC01_getAmbientLightGain
+    //%block="GPLC01 get ambient light gain"
     //%group=Light
     //%advanced=true
     function getAmbientLightGain(): number {
@@ -1006,8 +1006,8 @@ namespace SL06 {
         return val;
     }
 
-    //%blockId=SL06_setAmbientLightGain
-    //%block="SL06 set ambient light gain %drive"
+    //%blockId=GPLC01_setAmbientLightGain
+    //%block="GPLC01 set ambient light gain %drive"
     //%group=Light
     //%advanced=true
     function setAmbientLightGain(drive: number): void {
@@ -1027,8 +1027,8 @@ namespace SL06 {
         wireWriteDataByte(0x8F, val)
     }
 
-    //%blockId=SL06_clearAmbientLightInt
-    //%block="SL06 clear ambient light int"
+    //%blockId=GPLC01_clearAmbientLightInt
+    //%block="GPLC01 clear ambient light int"
     //%group=Light
     //%advanced=true
     function clearAmbientLightInt(): void {
@@ -1037,8 +1037,8 @@ namespace SL06 {
         throwaway = wireReadDataByte(0xE7)
     }
 
-    //%blockId=SL06_getAmbientLight
-    //%block="SL06 illuminance %u"
+    //%blockId=GPLC01_getAmbientLight
+    //%block="GPLC01 illuminance %u"
     //%group=Light
     export function ambientLight(u: light_unit): number {
         let val_byte: number;
@@ -1060,8 +1060,8 @@ namespace SL06 {
         return val
     }
 
-    //%blockId=SL06_getRedLight
-    //%block="SL06 red light"
+    //%blockId=GPLC01_getRedLight
+    //%block="GPLC01 red light"
     //%group=Light
     export function redLight(): number {
         let val_byte: number;
@@ -1079,8 +1079,8 @@ namespace SL06 {
         return val;
     }
 
-    //%blockId=SL06_getGreenLight
-    //%block="SL06 green light"
+    //%blockId=GPLC01_getGreenLight
+    //%block="GPLC01 green light"
     //%group=Light
     export function greenLight(): number {
         let val_byte: number;
@@ -1101,8 +1101,8 @@ namespace SL06 {
         return val;
     }
 
-    //%blockId=SL06_getBlueLight
-    //%block="SL06 blue light"
+    //%blockId=GPLC01_getBlueLight
+    //%block="GPLC01 blue light"
     //%group=Light
     export function blueLight(): number {
         let val_byte: number;
