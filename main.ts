@@ -4,7 +4,7 @@
 /**
  * SL06 block
  */
-//% color=#444444 icon="\uf0eb"
+//% color=#444444 icon="\uf256"
 //% groups=[Colour,Light, Gesture, Proximity, Optional]
 namespace SL06 {
 
